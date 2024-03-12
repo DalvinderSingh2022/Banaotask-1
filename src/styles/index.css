@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex.col {
+  flex-direction: column;
+}
+
+button,
+input {
+  border: none;
+  outline: none;
+}
+
+main {
+  position: relative;
+}
+
+nav {
+  padding: 24px 72px;
+  background: #FFF;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+  height: 72px;
+  justify-content: space-between;
+}
+
+nav .logo {
+  min-width: 162.566px;
+  height: 24px;
+}
+
+nav input {
+  border-radius: 21px;
+  background-color: #F2F2F2;
+  width: 360px;
+  height: 42px;
+  margin-top: -8px;
+  padding: 0 50px;
+  color: #5C5C5C;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav label {
+  position: relative;
+}
+
+nav label:before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+  width: 22px;
+  height: 22px;
+  background: url("../assets/searchIcon.png") center / contain no-repeat;
+}
+
+nav .account {
+  color: #2E2E2E;
+  font-size: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+
+nav .account img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+nav .account .userName {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav .account span {
+  color: #2F6CE5;
+  font-weight: 700;
+}
+
+nav .account svg {
+  min-width: 24px;
+  height: 24px;
+}
+
+aside {
+  position: relative;
+  height: 440px;
+  background-image: url('./../assets/HeroSection.jpg');
+  background-position-x: 50%;
+  background-position-y: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: lightgray;
+  color: #FFF;
+  align-items: flex-end;
+}
+
+aside .gradient {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.60) 100%);
+}
+
+aside .text {
+  padding: 80px 0;
+  width: min(1040px, calc(100vw - 32px));
+  margin: 0 auto;
+  z-index: 99;
+  position: relative;
+}
+
+aside h1 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+aside h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+article section {
+  width: min(1040px, 100%);
+  margin: 32px auto 28px;
+  border-bottom: 1px solid #E0E0E0;
+  justify-content: space-between;
+}
+
+article section .filters {
+  gap: 20px;
+}
+
+article section .filters span {
+  color: #8A8A8A;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+article section .filters span:first-of-type {
+  color: #000;
+  position: relative;
+}
+
+article section .filters span:first-of-type::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  bottom: -21px;
+  left: 0;
+  display: block;
+  position: absolute;
+}
+
+article section .buttons {
+  gap: 16px;
+}
+
+article section .buttons button {
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: #2F6CE5;
+  width: 125px;
+  height: 36px;
+  cursor: pointer;
+}
+
+article section .buttons button:first-of-type {
+  width: 133px;
+  background-color: #EDEEF0;
+}
+
+article section .buttons button.leave {
+  border-radius: 4px;
+  border: 0.8px solid #989899;
+  background: #FFF;
+  width: 134px;
+  height: 36px;
+}
+
+article section .buttons svg {
+  min-width: 22px;
+  height: 22px;
+}
+
+article section .buttons button:first-of-type span {
+  color: #000;
+}
+
+article section .buttons span {
+  color: #FFF;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+article section .buttons .leave span {
+  color: #6A6A6B;
+}
+
+article .PostSection {
+  width: min(1040px, calc(100vw - 2em));
+  margin: auto;
+  display: grid;
+  grid-template-columns: min(692px, calc(100% - 260px)) 243px;
+  justify-content: space-between;
+}
+
+article .PostSection .posts {
+  gap: 16px;
+  padding: 18px 0;
+}
+
+article .posts .post {
+  border-radius: 4px;
+  border: 1px solid #E0E0E0;
+  background-color: #FFF;
+  padding: 20px;
+  width: 100%;
+  overflow: hidden;
+  color: #000;
+}
+
+article .posts .post img {
+  width: calc(100% + 40px);
+  height: 220px;
+  margin: -20px -20px 12px;
+  object-fit: cover;
+}
+
+article .posts .post .type {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+article .posts .post .heading {
+  gap: 24px;
+  justify-content: space-between;
+  margin: 10px 0 12px;
+  position: relative;
+}
+
+article .posts .post .heading .options {
+  position: absolute;
+  border-radius: 4px;
+  background: #FFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.08), 0px 2px 8px 0px rgba(0, 0, 0, 0.16);
+  right: 0;
+  top: 36px;
+  padding: 10px;
+  width: 160px;
+}
+
+article .posts .post .heading .option {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+article .posts .post .heading .option:hover {
+  background-color: #ececee;
+}
+
+article .posts .post .heading svg {
+  min-width: 36px;
+  height: 32px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+article .posts .post .heading svg.active {
+  background-color: #BFBFC0;
+}
+
+article .posts .post .heading h1 {
+  font-size: 22px;
+  white-space: wrap;
+  font-weight: 600;
+  line-height: 29.517px;
+  color: inherit;
+}
+
+article .posts .post .detail {
+  color: #5C5C5C;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25.492px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+
+article .posts .post .link {
+  border-radius: 8px;
+  border: 0.7px solid #A9AEB8;
+  background-color: #FFF;
+  color: #02B875;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 18.252px;
+  padding: 9px 0;
+  width: 100%;
+}
+
+article .posts .post .link.visit {
+  color: #E56135;
+}
+
+article .posts .post .Userviews {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 32px;
+  align-items: center;
+}
+
+article .posts .post .Userviews img {
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  border-radius: 50%;
+}
+
+article .posts .post .Userviews .views {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 40px 0 10px;
+  align-items: center;
+}
+
+article .posts .post .Userviews .views .name {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+article .posts .post .Userviews .viewsCount {
+  align-items: center;
+  gap: 8px;
+}
+
+article .posts .post .Userviews .viewsCount span {
+  color: #525252;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+article .posts .post .Userviews button {
+  display: flex;
+  align-items: center;
+  width: 42px;
+  height: 36px;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+article .posts .post .Userviews button svg {
+  min-width: 18px;
+  height: 18px;
+}
+
+article .posts .post .Userviews button span {
+  display: none;
+}
+
+
+article .location {
+  padding: 28px 0;
+  align-items: stretch;
+}
+
+article .location .search {
+  border-bottom: 1px solid #B8B8B8;
+  padding: 11px 0;
+  align-items: center;
+  gap: 4px;
+  justify-content: space-between;
+}
+
+article .location .search input {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+article .location .search svg:first-of-type {
+  min-width: 18px;
+  height: 18px;
+}
+
+article .location .search svg {
+  min-width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+article .location .msg {
+  opacity: 50%;
+  gap: 4px;
+  margin: 32px 0;
+}
+
+article .location .msg svg {
+  min-width: 16px;
+  height: 16px;
+}
+
+article .location .msg span {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  white-space: wrap;
+}
+
+.recommended .heading {
+  align-items: center;
+  gap: 4px;
+}
+
+.recommended .heading svg {
+  min-width: 16.5px;
+  height: 15px;
+}
+
+.recommended .heading h1 {
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+.recommended .list {
+  gap: 22px;
+  margin: 24px 0;
+}
+
+.recommended .list .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.recommended .item img {
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+}
+
+.recommended .list .item span {
+  width: 100%;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.recommended .list .item button {
+  border-radius: 14px;
+  background: #EDEEF0;
+  width: 60px;
+  height: 24px;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  padding: 4px 12px;
+  cursor: pointer;
+}
+
+.recommended .list .item button.active {
+  width: 72px;
+  background: #000;
+  color: #FFF;
+}
+
+.recommended .link {
+  display: block;
+  width: 100%;
+  color: #2F6CE5;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 36px 0;
+  cursor: pointer;
+}
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  background-color: rgba(0, 0, 0, .6);
+  z-index: 999;
+  top: 0;
+  position: fixed;
+  place-items: center;
+}
+
+.modal>div {
+  width: min(736px, 100vw);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 36px;
+  position: relative;
+}
+
+.modal .closebtn {
+  position: absolute;
+  top: -42px;
+  right: -14px;
+  cursor: pointer;
+}
+
+.modal .heading {
+  border-radius: 8px 8px 0px 0px;
+  background: #EFFFF4;
+  color: #008A45;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 17px 0;
+  margin: -36px -36px 0;
+}
+
+.modal .form,
+.modal .poster {
+  width: 50%;
+}
+
+.modal .form h1 {
+  margin: 24px 0;
+  color: #000;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.modal .form .inputs .label {
+  position: relative;
+}
+
+.modal .form .inputs .label:before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 18px;
+  height: 18px;
+  background: url("../assets/eyeIcon.png") center / contain no-repeat;
+}
+
+.modal .form input {
+  width: 100%;
+  height: 100%;
+  padding: 12px 15px;
+  border-radius: 0px 0px 2px 2px;
+  border: 1px solid #D9D9DB;
+  background: #F7F8FA;
+  color: #8A8A8A;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.modal .form .group.submit {
+  border-radius: 20px;
+  background: #2F6CE5;
+  color: #FFF;
+  font-weight: 600;
+  margin: 20px 0;
+  border: none;
+}
+
+.modal .form .group {
+  border-radius: 2px;
+  border: 0.6px solid #D9D9DB;
+  background: #FFF;
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+button.group img,
+button.group svg {
+  width: 16px;
+  height: 16px;
+}
+
+.modal .form .forgot {
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 19px 0 0;
+  letter-spacing: -0.096px;
+}
+
+.modal .poster .link {
+  justify-content: flex-end;
+  color: #3D3D3D;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 31px 0;
+}
+
+.modal .poster .link span {
+  color: #2F6CE5;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.modal .poster .link span:hover {
+  text-decoration: underline;
+}
+
+.modal .poster img {
+  height: 320px;
+}
+
+.modal .poster .message {
+  color: #000;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.088px;
+  text-align: right;
+  opacity: 60%;
+}
+
+@media screen and (max-width:1080px) {
+  nav {
+    padding: 24px;
+  }
+
+  aside .text {
+    padding: 80px 16px;
+  }
+
+  article section {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (max-width:820px) {
+
+
+  article .PostSection .location,
+  article .posts .post .Userviews .viewsCount svg {
+    display: none;
+  }
+
+  .editbutton {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #FF5C5C 0%, #F0568A 100%);
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.08)) drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.18));
+  }
+
+  nav {
+    position: absolute;
+    width: 100%;
+    z-index: 9;
+    background-color: transparent;
+  }
+
+  nav button {
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    width: 76px;
+    height: 28px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.60) 100%);
+  }
+
+  aside {
+    height: 236px;
+  }
+
+  aside .text {
+    padding: 32px 16px;
+    margin: 0;
+  }
+
+  aside h1 {
+    font-size: 17px;
+  }
+
+  aside h2 {
+    font-size: 12px;
+  }
+
+  article section {
+    border: none;
+    margin: 20px 0;
+    align-items: center;
+  }
+
+  article section .filters span:first-of-type {
+    color: #212529;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.14px;
+    margin: 0;
+    position: static;
+  }
+
+  article .PostSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  article .PostSection .posts .post {
+    border: none;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.12));
+  }
+
+  article .posts .post .heading h1 {
+    color: #212529;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  article .posts .post .type {
+    color: #343A40;
+    font-size: 14px;
+  }
+
+  article .posts .post .detail {
+    color: #495057;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  article .posts .post .Userviews .views {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  article .posts .post .Userviews .views .name {
+    color: #212529;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  article .posts .post .Userviews .viewsCount span {
+    color: #495057;
+    font-family: IBM Plex Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  article .posts .post .Userviews button {
+    min-width: 70px;
+    height: 36px;
+    padding: 0 8px;
+    justify-content: space-between;
+  }
+
+  article .posts .post .Userviews button span {
+    display: block;
+    color: #212529;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .modal {
+    align-items: end;
+  }
+
+  .modal>div {
+    padding: 0 20px 22px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .modal .closebtn {
+    top: 24px;
+    right: 22px;
+  }
+
+  .modal .form {
+    width: 100%;
+  }
+
+  .modal .form .message {
+    color: #212529;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.088px;
+    margin-top: 18px;
+  }
+
+  .modal .form .button {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .modal .form .button span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
